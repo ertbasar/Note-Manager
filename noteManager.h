@@ -20,6 +20,7 @@ class NoteManager{
 
     // For listing and printing the note contents
     void listNotes(){}
+
     private:
     std::vector<Note> m_notes{};
     int m_nextID{1};
