@@ -17,5 +17,5 @@ std::string Note::getNote() const {
 
 // Func. for printing the note node content
 void Note::printNote() const {
-    std::cout << m_content;
+    std::cout << m_content << "\n";
 }

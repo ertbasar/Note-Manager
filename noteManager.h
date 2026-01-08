@@ -13,13 +13,16 @@ class NoteManager{
     NoteManager(Args&&...) = delete;
 
     // Adding node to the vector
-    void addNote(const std::string& str){};
+    void addNote(const std::string str);
 
     // Removing a node from the vector
-    void removeNote(const int& id){}
+    void removeNote(const int& id);
+
+    // Changing the content of the node
+    void changeNote(const std::string str, const int id);
 
     // For listing and printing the note contents
-    void listNotes(){}
+    void listNotes();
 
     private:
     std::vector<Note> m_notes{};
