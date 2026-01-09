@@ -11,11 +11,12 @@ void NoteManager::addNote(const std::string str){
 // Removing a node from the vector
 void NoteManager::removeNote(const int& id){
     m_notes.erase(m_notes.begin() + id - 1);
+    m_nextID--;
 }
 
 // Changing the content of the node
 void NoteManager::changeNote(const std::string str, const int id){
-    m_notes[id+1].setNote(str);
+    m_notes[id-1].setNote(str);
 }
 
 // For listing and printing the note contents

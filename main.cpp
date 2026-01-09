@@ -35,6 +35,7 @@ int main(){
             std::cout << "Please enter your new note: " << std::endl;
             std::getline(std::cin, newStr);
             nm.addNote(newStr);
+            std::cout << "\n";
             break;
         case 3:
             std::cout << "Please enter the ID number of the note you want to change: ";
@@ -43,11 +44,14 @@ int main(){
             std::cout << "Please enter your new note: ";
             std::getline(std::cin, newStr);
             nm.changeNote(newStr, idInput);
+            std::cout << "\n";
             break;
         case 4:
-            std::cout << "Please enter the ID number of the note you want to change: ";
+            std::cout << "Please enter the ID number of the note you want to remove: ";
             std::cin >> idInput;
+            std::cin.ignore();
             nm.removeNote(idInput);
+            std::cout << "\n";
             break;
         case 5:
             std::cout << "See ya! \n";
