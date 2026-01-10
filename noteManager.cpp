@@ -27,3 +27,7 @@ void NoteManager::listNotes(){
     }
     
 }
+
+int NoteManager::lastID(){
+    return m_nextID-1;
+}

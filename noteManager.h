@@ -24,6 +24,9 @@ class NoteManager{
     // For listing and printing the note contents
     void listNotes();
 
+    // For returning the last ID number to use it in the input validation
+    int lastID();
+
     private:
     std::vector<Note> m_notes{};
     int m_nextID{1};

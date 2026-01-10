@@ -6,8 +6,8 @@ int main(){
     // Note manager object which we will use in this program
     NoteManager nm{};
     // For user's selection of operation
-    int input{};
-    while(input != 5){
+    int operation{};
+    while(operation != 5){
         std::cout << "Please enter the operation you would like to do \n";
         std::cout << "List All Notes -> 1 \n";
         std::cout << "Add a Note -> 2 \n";
@@ -16,7 +16,7 @@ int main(){
         std::cout << "Exit the Program -> 5 \n";
         
         // For user's selection of operation
-        std::cin >> input;
+        std::cin >> operation;
         std::cin.ignore();
         // Need a check mechanism here
 
@@ -25,7 +25,7 @@ int main(){
         // For the id input operations
         int idInput{};
         
-        switch (input)
+        switch (operation)
         {
         case 1:
             nm.listNotes();
