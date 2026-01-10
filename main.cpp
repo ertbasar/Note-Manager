@@ -1,7 +1,7 @@
 #include <iostream> 
 #include "note.h"
 #include "noteManager.h"
-
+#include "input.h"
 int main(){
     // Note manager object which we will use in this program
     NoteManager nm{};
@@ -16,8 +16,7 @@ int main(){
         std::cout << "Exit the Program -> 5 \n";
         
         // For user's selection of operation
-        std::cin >> operation;
-        std::cin.ignore();
+        operation = getOperation();
         // Need a check mechanism here
 
         // For note texts that will be used
@@ -33,23 +32,21 @@ int main(){
             break;
         case 2:
             std::cout << "Please enter your new note: " << std::endl;
-            std::getline(std::cin, newStr);
+            newStr = getContent(newStr);
             nm.addNote(newStr);
             std::cout << "\n";
             break;
         case 3:
             std::cout << "Please enter the ID number of the note you want to change: ";
-            std::cin >> idInput;
-            std::cin.ignore();
+            idInput = getId(nm.lastID());
             std::cout << "Please enter your new note: ";
-            std::getline(std::cin, newStr);
+            newStr = getContent(newStr);
             nm.changeNote(newStr, idInput);
             std::cout << "\n";
             break;
         case 4:
             std::cout << "Please enter the ID number of the note you want to remove: ";
-            std::cin >> idInput;
-            std::cin.ignore();
+            idInput = getId(nm.lastID());
             nm.removeNote(idInput);
             std::cout << "\n";
             break;

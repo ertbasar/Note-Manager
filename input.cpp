@@ -32,8 +32,7 @@ int getId(int lastID){
 }
 
 // For getting content input
-std::string_view getContent(){
-    std::string content{};
+std::string_view getContent(std::string& content){
     std::getline(std::cin, content);
     return content;
 }

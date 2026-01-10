@@ -7,5 +7,5 @@ int getOperation();
 int getId(int lastID);
 
 // For getting content input
-std::string_view getContent();
+std::string_view getContent(std::string& content);
 
