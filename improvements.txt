@@ -1,3 +1,2 @@
-1- Input check mechanism
-2- Save & Load mechanism
-3- User login&logout operations
+1- Save & Load mechanism
+2- User login&logout operations
