@@ -2,9 +2,16 @@
 #include "note.h"
 #include "noteManager.h"
 #include "input.h"
+#include "save.h"
+#include "load.h"
+
 int main(){
     // Note manager object which we will use in this program
     NoteManager nm{};
+
+    // Load notes from a file and add them to our nm object
+
+
     // For user's selection of operation
     int operation{};
     while(operation != 5){
@@ -13,7 +20,7 @@ int main(){
         std::cout << "Add a Note -> 2 \n";
         std::cout << "Change a Note -> 3 \n" ;
         std::cout << "Remove a Note -> 4 \n";
-        std::cout << "Exit the Program -> 5 \n";
+        std::cout << "Save & Exit the Program -> 5 \n";
         
         // For user's selection of operation
         operation = getOperation();
@@ -52,6 +59,7 @@ int main(){
             break;
         case 5:
             std::cout << "See ya! \n";
+            // Save notes to a file before closing the program
             break;
         default:
             break;
