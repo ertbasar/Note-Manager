@@ -4,6 +4,10 @@
 #include "input.h"
 #include "save.h"
 #include "load.h"
+// Including for save&load mechanism
+#include <fstream>
+#include "json.hpp"
+using json = nlohmann::json;
 
 int main(){
     // Note manager object which we will use in this program

@@ -1,1 +1,14 @@
 1- Save & Load mechanism
+Save için 2 şeye karar verilmeli.
+a. hangi formatta kayıt yapılacak? Bunun cevabını daha tam olarak 
+vermedim. | karakteri gibi bir parser olabilir. Hazır kütüphaneler
+kullanılarak json vs. olarak da yapılabilir ki bu daha detaylı
+olur.
+b. ne zaman kayıt yapılacak? Bunun cevabı her update vs. sonrası
+olmalı. not ekleme, çıkarma veya güncelleme sonrasında nm objesi
+içindekiler sırayla bir yere yazılır. Küçük bir proje olduğu için daha
+detaylı bir şekilde yapmaya gerek yok. (fstream'in daha detaylı
+kullanımıyla beraber hepsini yazma değil de bir kısmını yazma gibi
+bir işlem de yapılabilirdi.)
+Load ise daha kolay, program başladıktan sonra nm objesine sırayla 
+notlar add ile enjekte edilir. 
