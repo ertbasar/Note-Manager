@@ -25,7 +25,10 @@ class NoteManager{
     void listNotes();
 
     // For returning the last ID number to use it in the input validation
-    int lastID();
+    int lastID() const;
+
+    // For returning the notes for saving
+    std::vector<Note> getNotesVector();
 
     private:
     std::vector<Note> m_notes{};

@@ -14,7 +14,7 @@ int main(){
     NoteManager nm{};
 
     // Load notes from a file and add them to our nm object
-
+    load(nm);
 
     // For user's selection of operation
     int operation{};
@@ -42,7 +42,7 @@ int main(){
             std::cout << "\n";
             break;
         case 2:
-            std::cout << "Please enter your new note: " << std::endl;
+            std::cout << "\nPlease enter your new note: " << std::endl;
             newStr = getContent(newStr);
             nm.addNote(newStr);
             std::cout << "\n";
@@ -70,5 +70,6 @@ int main(){
         }
 
     }
+    save(nm);
     return 0;
 }

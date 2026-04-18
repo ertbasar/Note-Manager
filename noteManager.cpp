@@ -21,13 +21,19 @@ void NoteManager::changeNote(const std::string str, const int id){
 
 // For listing and printing the note contents
 void NoteManager::listNotes(){
+    std::cout << std::endl;
     for (int i = 1; i < m_nextID; ++i)
     {
-        std::cout << "Note ID: " << i << "\n" << m_notes[i-1].getNote() << "\n";
+        std::cout << "Note ID: " << i << "\n" << m_notes[i-1].getNote() << "\n\n";
     }
     
 }
 
-int NoteManager::lastID(){
+int NoteManager::lastID() const {
     return m_nextID-1;
+}
+
+// For returning the notes for saving
+std::vector<Note> NoteManager::getNotesVector(){
+    return m_notes;
 }
